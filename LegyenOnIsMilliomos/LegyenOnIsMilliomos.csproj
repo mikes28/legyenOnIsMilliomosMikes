@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+  <Content Include="assets\**\*.*" CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
+
+
 </Project>
