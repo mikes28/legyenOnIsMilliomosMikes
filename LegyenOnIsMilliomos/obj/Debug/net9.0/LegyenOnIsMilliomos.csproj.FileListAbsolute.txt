@@ -1,0 +1,17 @@
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/assets/kerdes
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/assets/sorkerdes
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/LegyenOnIsMilliomos
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/LegyenOnIsMilliomos.deps.json
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/LegyenOnIsMilliomos.runtimeconfig.json
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/LegyenOnIsMilliomos.dll
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/bin/Debug/net9.0/LegyenOnIsMilliomos.pdb
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.GeneratedMSBuildEditorConfig.editorconfig
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.AssemblyInfoInputs.cache
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.AssemblyInfo.cs
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.csproj.CoreCompileInputs.cache
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.sourcelink.json
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.dll
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/refint/LegyenOnIsMilliomos.dll
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.pdb
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/LegyenOnIsMilliomos.genruntimeconfig.cache
+/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/obj/Debug/net9.0/ref/LegyenOnIsMilliomos.dll
