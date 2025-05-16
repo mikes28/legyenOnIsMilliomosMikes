@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "42m3kV4Ltoc=",
+  "success": true,
+  "projectFilePath": "/home/mikes/Documents/c#/legyenonismilliomos/LegyenOnIsMilliomos/LegyenOnIsMilliomos.csproj",
+  "expectedPackageFiles": [
+    "/home/mikes/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
