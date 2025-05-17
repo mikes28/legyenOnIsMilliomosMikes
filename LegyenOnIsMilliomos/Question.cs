@@ -8,10 +8,10 @@ namespace LegyenOnIsMilliomos
 {
     internal class Question
     {
-        private string ques;
-        private string[] ans = new string[4];
-        private char[] corrAns = new char[4];
-        private string category;
+        private readonly string ques;
+        private readonly string[] ans = new string[4];
+        private readonly char[] corrAns = new char[4];
+        private readonly string category;
 
         public Question(string ques, string[] ans, char[] corrAns, string category)
         {
