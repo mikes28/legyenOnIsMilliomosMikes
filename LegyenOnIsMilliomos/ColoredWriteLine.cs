@@ -19,5 +19,17 @@ namespace LegyenOnIsMilliomos
 
 
         }
+
+        public static void Write(string text, ConsoleColor font = ConsoleColor.White, ConsoleColor background = ConsoleColor.Black)
+        {
+
+
+            Console.ForegroundColor = font;
+            Console.BackgroundColor = background;
+            Console.Write(text);
+            Console.ResetColor();
+
+
+        }
     }
 }
