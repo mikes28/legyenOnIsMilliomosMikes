@@ -25,6 +25,8 @@ namespace LegyenOnIsMilliomos
         public string[] Ans { get => ans; }
         public string Category { get => category; }
 
+        internal char[] CorrAns {get => corrAns;}
+
         public bool IsItCorrect(char[] givenAns)
         {
             if (givenAns == null || givenAns.Length != corrAns.Length)
