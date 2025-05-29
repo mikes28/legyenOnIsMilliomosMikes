@@ -1,49 +1,79 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LegyenOnIsMilliomos
 {
     internal class AskQuestion
     {
+        private static HelpHandler helpHandler = new HelpHandler();
+
         internal static bool Ask(Question question, bool _isItOrder = false)
         {
+            Console.Clear();
+            ColoredWrite.Write("Kérdésed:\n", ConsoleColor.Yellow, ConsoleColor.Black);
 
-            System.Console.WriteLine("szia a kerdesed:");
+            ColoredWrite.Write($"Kategória: {question.Category}\n", ConsoleColor.White, ConsoleColor.Black);
+            ColoredWrite.Write($"{question.Ques}\n", ConsoleColor.White, ConsoleColor.Black);
 
-            System.Console.WriteLine($"Kategoriaja {question.Category}");
-            System.Console.WriteLine(question.Ques);
-            System.Console.WriteLine($"A: {question.Ans[0]}");
-            System.Console.WriteLine($"B: {question.Ans[1]}");
-            System.Console.WriteLine($"C: {question.Ans[2]}");
-            System.Console.WriteLine($"D: {question.Ans[3]}");
+            ColoredWrite.Write($"A: {question.Ans[0]}\n", ConsoleColor.White, ConsoleColor.Black);
+            ColoredWrite.Write($"B: {question.Ans[1]}\n", ConsoleColor.White, ConsoleColor.Black);
+            ColoredWrite.Write($"C: {question.Ans[2]}\n", ConsoleColor.White, ConsoleColor.Black);
+            ColoredWrite.Write($"D: {question.Ans[3]}\n", ConsoleColor.White, ConsoleColor.Black);
+
             if (_isItOrder)
             {
-                System.Console.WriteLine("kerlek gepeld be a helyes sorrendet majd nyomj entert. A betuket szokozok nelkul ird egymas utan.");
-                if (question.IsItCorrect(Console.ReadLine().ToString().ToCharArray()))
+                ColoredWrite.Write("\nÍrd be a helyes sorrendet, szóköz nélkül (pl. ABCD), majd ENTER:\n", ConsoleColor.Cyan, ConsoleColor.Black);
+                var input = Console.ReadLine().ToUpper().ToCharArray();
+                if (question.IsItCorrect(input))
                 {
-                    System.Console.WriteLine("jo valasz");
+                    ColoredWrite.Write("Helyes sorrend!\n", ConsoleColor.Green, ConsoleColor.Black);
                     return true;
-
                 }
-                System.Console.WriteLine("sajnos rossz valasz");
-                return false;
+                else
+                {
+                    ColoredWrite.Write("Hibás sorrend.\n", ConsoleColor.Red, ConsoleColor.Black);
+                    return false;
+                }
             }
             else
             {
-                System.Console.WriteLine("Kerlek nyomd le a megoldas betujet, vagy a szokozt!");
-                if (question.IsItCorrect([Console.ReadKey().KeyChar]))
+                while (true)
                 {
-                    System.Console.WriteLine("jo valasz");
-                    return true;
+                    ColoredWrite.Write("\nSegítség lehetőségek:\n", ConsoleColor.Cyan, ConsoleColor.Black);
+                    ColoredWrite.Write("1: 50:50\n", ConsoleColor.Cyan, ConsoleColor.Black);
+                    ColoredWrite.Write("2: Telefonos segítség\n", ConsoleColor.Cyan, ConsoleColor.Black);
+                    ColoredWrite.Write("3: Közönségi szavazás\n", ConsoleColor.Cyan, ConsoleColor.Black);
+                    ColoredWrite.Write("Írd be a válasz betűjét (A-D) vagy a segítség számát (1-3):\n", ConsoleColor.White, ConsoleColor.Black);
 
+                    var key = Console.ReadKey(true).KeyChar;
+
+                    if (char.IsDigit(key) && (key == '1' || key == '2' || key == '3'))
+                    {
+                        bool used = helpHandler.UseHelp(key - '0', question);
+                        if (!used)
+                        {
+                            ColoredWrite.Write("Ez a segítség már használva vagy nem elérhető.\n", ConsoleColor.Yellow, ConsoleColor.Black);
+                        }
+                        continue;
+                    }
+
+                    char answerKey = char.ToUpper(key);
+                    if (answerKey >= 'A' && answerKey <= 'D')
+                    {
+                        if (question.IsItCorrect(new char[] { answerKey }))
+                        {
+                            ColoredWrite.Write("Helyes válasz!\n", ConsoleColor.Green, ConsoleColor.Black);
+                            return true;
+                        }
+                        else
+                        {
+                            ColoredWrite.Write("Helytelen válasz.\n", ConsoleColor.Red, ConsoleColor.Black);
+                            return false;
+                        }
+                    }
+
+                    ColoredWrite.Write("Érvénytelen bemenet, próbáld újra!\n", ConsoleColor.Yellow, ConsoleColor.Black);
                 }
-                System.Console.WriteLine("sajnos rossz valasz");
-                return false;
             }
-
         }
-        //todo ask question, decide it the ans is good. return bool. should make a func for colored print, and try to amke a good looking font based gui
     }
 }
